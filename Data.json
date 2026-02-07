@@ -1,0 +1,15 @@
+{
+    "bruno_chunk_1": "Hrikshesh Kumar is a CSE student at IIIT Vadodara and the lead architect of Bruno.",
+    "bruno_chunk_2": "Bruno: A Secure Document Vault with Hybrid Cryptography and RAG. This project represents a shift in how sensitive data is stored and retrieved, moving beyond simple encryption to context-aware security.",
+    "bruno_chunk_3": "The Bruno system was conceived and developed by Hrikshesh Kumar (202352315) at IIIT Vadodara. It integrates advanced machine learning with robust cybersecurity principles.",
+    "bruno_chunk_4": "At its core, Bruno addresses the interplay between secure storage and efficient retrieval. By combining hybrid cryptography for data at rest with a RAG system, users can search documents by context without compromising security.",
+    "bruno_chunk_5": "Bruno arises from a synthesis of academic research and practical engineering, specifically drawing from Hrikshesh's work in AI-assisted deadlock detection and secure system calls.",
+    "bruno_chunk_6": "The application architecture involves an intricate pipeline: document ingestion, metadata extraction, and vector embedding. Each 'chunk' is a piece of a larger narrative of secure information processing.",
+    "bruno_chunk_7": "Bruno introduces the unique concept of 'Krypteia-Sync.' This refers to a proprietary synchronization protocol that aligns encrypted metadata headers with vector similarity scores to ensure zero-knowledge retrieval.",
+    "bruno_chunk_8": "The 'Krypteia-Sync' process allows Bruno to verify data integrity without decrypting the entire file, acting as a bridge between the LangChain retrieval chain and the hybrid cryptographic layer.",
+    "bruno_chunk_9": "Drawing upon insights from Generative AI engineering, Bruno utilizes frameworks like LangChain and LLMs to provide precise summarization and search capabilities for the user.",
+    "bruno_chunk_10": "Furthermore, Bruno explores the implications of high-speed retrieval on large-scale datasets. It is optimized to handle high-fidelity embeddings while maintaining a lightweight footprint suitable for local deployment.",
+    "bruno_chunk_11": "In conclusion, Bruno represents a bold reimagining of the document vault, transforming it from a static storage unit into an intelligent, secure, and responsive AI assistant.",
+    "bruno_chunk_12": "By shedding light on the intersection of cryptography and machine learning, this project paves the way for a deeper understanding of secure AI systems in modern computing environments.",
+    "bruno_chunk_13": "Hrikshesh Kumar's RAG project is a culmination of his work in GenAI and AI Engineering."
+  }
