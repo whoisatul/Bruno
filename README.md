@@ -1,10 +1,10 @@
-# 🛡️ Bruno: Secure RAG Vault
+#  Bruno: RAG based application
 
 > **"Context without Compromise."**
 
-**Bruno** is a next-generation **Retrieval-Augmented Generation (RAG)** system designed for high-security environments. Unlike standard RAG implementations that expose raw text to cloud vector databases, Bruno utilizes a **Hybrid Cryptographic Architecture** to ensure that sensitive document content remains in a local, secure vault (`data.json`) while only mathematical vectors are synchronized to the cloud.
+**Bruno** is a next-generation **Retrieval-Augmented Generation (RAG)** system designed for high-security environments. Unlike standard RAG implementations that expose raw text to cloud vector databases, Bruno utilizes a ***Zero knowledge architecture*** to ensure that sensitive document content remains in a local, secure vault (`data.json`) while only mathematical vectors are synchronized to the cloud.
 
-Developed by **Hrikshesh Kumar** at **IIIT Vadodara** for the offline version of **Hack IIITV**.
+Developed by **Hrikshesh Kumar** at **IIIT Vadodara** **
 
 ---
 
