@@ -1,38 +1,69 @@
-#  Bruno: RAG based application
+# Bruno: RAG-Based Application
 
 > **"Context without Compromise."**
 
-**Bruno** is a next-generation **Retrieval-Augmented Generation (RAG)** system designed for high-security environments. Unlike standard RAG implementations that expose raw text to cloud vector databases, Bruno utilizes a ***Zero knowledge architecture*** to ensure that sensitive document content remains in a local, secure vault (`data.json`) while only mathematical vectors are synchronized to the cloud.
+**Bruno** is a **Retrieval-Augmented Generation (RAG)** application designed to answer questions based on a collection of documents. It combines **vector search** and **large language models** to retrieve relevant information and generate contextual responses.
 
-Developed by **Hrikshesh Kumar** at **IIIT Vadodara** **
+Bruno stores **document embeddings** in a **vector database (Pinecone)** while the actual document content is maintained locally in `data.json` for retrieval during query time.
 
----
-
-##  Key Features
-
-* ** Zero knowledge architecture:** Text data is **never** stored in the vector database (Pinecone). Only opaque vectors and IDs are transmitted, ensuring data privacy.
-* ** Krypteia-Sync Protocol:** A proprietary zero-knowledge retrieval method that aligns encrypted metadata headers with vector similarity scores to verify data integrity without decryption.
-* ** Intelligent Context:** Powered by **LangChain** and **OpenAI (GPT-3.5-Turbo)**, allowing for semantic understanding of complex queries.
-* ** Auto-Ingestion:** Automatically detects, chunks, and encrypts new text files placed in the `Dataset/` directory.
-* ** Modern Interface:** A clean, responsive chat interface built with **Gradio**, featuring a professional terminal-style aesthetic.
+Developed by **Hrikshesh Kumar** at **IIIT Vadodara**.
 
 ---
 
-##  Architecture
+## Key Features
 
-1.  **Ingestion (`bruno.py`):**
-    * Documents are split using `RecursiveCharacterTextSplitter` to preserve semantic meaning.
-    * Raw text is stored locally in the **Secure Vault** (`data.json`).
-    * Embeddings are generated via `text-embedding-3-small`.
-    * Only vectors + IDs are pushed to **Pinecone**.
+- **RAG-based Question Answering**  
+  Uses semantic search to retrieve relevant document chunks before generating answers.
 
-2.  **Retrieval (`main.py`):**
-    * User query is embedded and sent to Pinecone.
-    * Pinecone returns "blind" IDs (no text).
-    * **Bruno** locally retrieves the actual content from the Vault using these IDs.
-    * The context is passed to the LLM to generate a secure response.
+- **Vector Search with Pinecone**  
+  Efficient similarity search over document embeddings.
+
+- **LLM-powered Responses**  
+  Uses **LangChain** with **OpenAI (GPT-3.5-Turbo)** to generate contextual answers.
+
+- **Automatic Document Ingestion**  
+  Detects and processes text files placed inside the `Dataset/` directory.
+
+- **Modern Interface**  
+  Clean chat interface built with **Gradio** for interacting with the system.
 
 ---
+
+## Architecture
+
+### 1. Ingestion (`bruno.py`)
+
+- Documents are split using **RecursiveCharacterTextSplitter** to preserve semantic context.
+- Text chunks are stored locally in **`data.json`**.
+- Embeddings are generated using **OpenAI `text-embedding-3-small`**.
+- Embeddings are stored in **Pinecone** for fast vector similarity search.
+
+### 2. Retrieval (`main.py`)
+
+- The user query is converted into an embedding.
+- Pinecone performs similarity search to find relevant document chunk IDs.
+- Corresponding text is retrieved from **`data.json`**.
+- The retrieved context is passed to the **LLM** to generate the final response.
+
+---
+
+## Tech Stack
+
+- **Python**
+- **LangChain**
+- **OpenAI API**
+- **Pinecone**
+- **Gradio**
+
+---
+
+## How It Works
+
+1. Add text documents to the `Dataset/` folder.
+2. Run the ingestion pipeline to generate embeddings and store them in Pinecone.
+3. Start the application.
+4. Ask questions through the chat interface.
+5. Bruno retrieves relevant document chunks and generates an answer using the LLM.
 
 ## 📦 Installation
 
@@ -53,8 +84,4 @@ PINECONE_API_KEY=your_pinecone_key_here
 `Start the secure interface:`
 python main.py
 
-## 👨‍💻 Author
-
-**Hrikshesh Kumar**
-* **Institution:** Indian Institute of Information Technology Vadodara (IIITV)
-* **Student ID:** 202352315
+Developed by **Hrikshesh Kumar** at **IIIT Vadodara** **
